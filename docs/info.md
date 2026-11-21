@@ -1,20 +1,11 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+An 8-bit one-hot pattern rotates by one position on every tick, so a single lit LED appears to run across the 8 outputs. A 22-bit divider slows the ~12 MHz board clock down to a few steps per second. Input ui[0] selects the rotation direction, and ui[2:1] selects one of four stepping speeds.
 
 ## How to test
 
-Explain how to use your project
+After reset, LED 0 lights up and the lit LED starts rotating. Flip ui[0] to reverse the direction. Change ui[2:1] between 00 and 11 to make the chaser run slower or faster.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Works directly with the 8 LEDs on the Tiny Tapeout demo board; no extra hardware is required.
